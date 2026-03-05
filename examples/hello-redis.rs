@@ -13,10 +13,9 @@ async fn main() -> Result<()> {
 
     // set the new key "hello" with value world
     client.set("hello", "world".into()).await?;
-
     // get the key "hello"
     let result = client.get("hello").await?;
-
+    println!("here 2");
     println!("got value from the server; result = {:?}", result);
 
     Ok(())
